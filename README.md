@@ -8,9 +8,9 @@ The project is being developed as an experimental simulation to understand how t
 
 In classical Newtonian physics, gravitational force is described using:
 
-\[
+$$
 F = \frac{GMm}{r^2}
-\]
+$$
 
 General Relativity provides a different interpretation. Instead of treating gravity simply as a force, massive objects cause **spacetime to curve**, and objects move through this curved spacetime.
 
@@ -66,7 +66,7 @@ The Schwarzschild metric describes spacetime around a non-rotating, spherically 
 
 The metric is commonly expressed as:
 
-\[
+$$
 ds^2 =
 -\left(1-\frac{2GM}{rc^2}\right)c^2dt^2
 +
@@ -75,7 +75,7 @@ ds^2 =
 r^2d\theta^2
 +
 r^2\sin^2(\theta)d\phi^2
-\]
+$$
 
 The project currently focuses on calculating the individual metric components from this equation.
 

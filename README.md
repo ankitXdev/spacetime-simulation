@@ -176,9 +176,9 @@ The primary mathematical model currently being explored is the **Schwarzschild m
 
 The Schwarzschild radius is:
 
-\[
+$$
 r_s = \frac{2GM}{c^2}
-\]
+$$
 
 where:
 

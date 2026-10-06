@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    The <project> element is the root of the Maven configuration.
+    Everything about the Maven project goes inside this element.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- Version of the Maven POM format -->
+    <modelVersion>4.0.0</modelVersion>
+
+
+    <!-- Identifies your project -->
+    <groupId>com.ankit</groupId>
+
+    <!-- Name/ID of the project -->
+    <artifactId>gravitational-pull-project</artifactId>
+
+    <!-- Version of your project -->
+    <version>1.0-SNAPSHOT</version>
+
+
+    <!--
+        Project-wide settings.
+        These values can be reused elsewhere in the pom.xml.
+    -->
+    <properties>
+
+        <!-- Tell Maven to compile the project using Java 26 -->
+        <maven.compiler.release>26</maven.compiler.release>
+
+        <!-- Character encoding used by the source files -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- JavaFX version we want to use -->
+        <javafx.version>26</javafx.version>
+
+    </properties>
+
+
+    <!--
+        Dependencies are external libraries that your project needs.
+        Maven automatically downloads them.
+    -->
+    <dependencies>
+
+        <!-- JavaFX Controls library -->
+        <dependency>
+
+            <!-- Organization that provides JavaFX -->
+            <groupId>org.openjfx</groupId>
+
+            <!-- JavaFX module containing UI controls -->
+            <artifactId>javafx-controls</artifactId>
+
+            <!-- Use the JavaFX version defined above -->
+            <version>${javafx.version}</version>
+
+        </dependency>
+
+    </dependencies>
+
+
+    <!-- Build configuration -->
+    <build>
+
+        <plugins>
+
+            <!--
+                JavaFX Maven Plugin.
+                This allows Maven to run your JavaFX application.
+            -->
+            <plugin>
+
+                <!-- JavaFX plugin provider -->
+                <groupId>org.openjfx</groupId>
+
+                <!-- Plugin used to run JavaFX applications -->
+                <artifactId>javafx-maven-plugin</artifactId>
+
+                <!-- Version of the plugin -->
+                <version>0.0.8</version>
+
+
+                <!-- Plugin configuration -->
+                <configuration>
+
+                    <!--
+                        Tells Maven which class contains
+                        the main JavaFX application.
+                    -->
+                    <mainClass>
+                        Gravitational_pull_Project.Simulation.SimulationMain
+                    </mainClass>
+
+                </configuration>
+
+            </plugin>
+
+        </plugins>
+
+    </build>
+
+</project>

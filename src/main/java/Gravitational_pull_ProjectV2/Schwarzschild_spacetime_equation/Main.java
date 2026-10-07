@@ -11,7 +11,7 @@ public class Main {
 
         double theta = Math.PI / 2;
         double G = 6.67430e-11; // G = Gravitational content
-        double c = 299792458;
+        double c = 299792458;   // c = speed of light 
 
         Body sun = new Body(
             1.989e30,
@@ -22,12 +22,11 @@ public class Main {
             
             // this is f(r) 
             double fr = calculator.calculateFr(sun);
-
+        
             // this is metric tensor and it is denoted by g_μν.
             double[][] MetricTensor = calculator.calculateMatricTensor(fr, sun, theta);
 
             // this is Schwarzschild Radius and it is denoted by rs.
             double SchwarzschildRadius = calculator.calculateSchwarzschildRadius(G, sun, c);
-
     }
 }

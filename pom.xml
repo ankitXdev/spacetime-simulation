@@ -46,19 +46,48 @@
         Maven automatically downloads them.
     -->
     <dependencies>
-
-        <!-- JavaFX Controls library -->
+        <!-- LWJGL -->
         <dependency>
+            <groupId>org.lwjgl</groupId>
+            <artifactId>lwjgl</artifactId>
+            <version>3.3.6</version>
+        </dependency>
 
-            <!-- Organization that provides JavaFX -->
-            <groupId>org.openjfx</groupId>
 
-            <!-- JavaFX module containing UI controls -->
-            <artifactId>javafx-controls</artifactId>
+        <!-- LWJGL Windows native -->
+        <dependency>
+            <groupId>org.lwjgl</groupId>
+            <artifactId>lwjgl</artifactId>
+            <version>3.3.6</version>
+            <classifier>natives-windows</classifier>
+        </dependency>
 
-            <!-- Use the JavaFX version defined above -->
-            <version>${javafx.version}</version>
+        <!-- GLFW -->
+        <dependency>
+            <groupId>org.lwjgl</groupId>
+            <artifactId>lwjgl-glfw</artifactId>
+            <version>3.3.6</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.lwjgl</groupId>
+            <artifactId>lwjgl-glfw</artifactId>
+            <version>3.3.6</version>
+            <classifier>natives-windows</classifier>
+        </dependency>
+
+        <!-- OpenGL -->
+        <dependency>
+            <groupId>org.lwjgl</groupId>
+            <artifactId>lwjgl-opengl</artifactId>
+            <version>3.3.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.lwjgl</groupId>
+            <artifactId>lwjgl-opengl</artifactId>
+            <version>3.3.6</version>
+            <classifier>natives-windows</classifier>
         </dependency>
 
     </dependencies>
@@ -69,36 +98,6 @@
 
         <plugins>
 
-            <!--
-                JavaFX Maven Plugin.
-                This allows Maven to run your JavaFX application.
-            -->
-            <plugin>
-
-                <!-- JavaFX plugin provider -->
-                <groupId>org.openjfx</groupId>
-
-                <!-- Plugin used to run JavaFX applications -->
-                <artifactId>javafx-maven-plugin</artifactId>
-
-                <!-- Version of the plugin -->
-                <version>0.0.8</version>
-
-
-                <!-- Plugin configuration -->
-                <configuration>
-
-                    <!--
-                        Tells Maven which class contains
-                        the main JavaFX application.
-                    -->
-                    <mainClass>
-                        Gravitational_pull_Project.Simulation.SimulationMain
-                    </mainClass>
-
-                </configuration>
-
-            </plugin>
 
         </plugins>
 

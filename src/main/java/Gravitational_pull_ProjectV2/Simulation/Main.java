@@ -8,9 +8,9 @@ import org.lwjgl.opengl.GL11;;
 
 public class Main {
 
-    static float circleY = 0.0f;    //vertical position 
+    static float circleY = 0.0f;    //vertical position for circle
     static float velocityY = 0.0f; //vertical velocity
-    static float gravity = -0.2f; // gravity
+    static float gravity = -9.80665f; // gravity
 
     public static void main(String[] args) {
         
@@ -62,7 +62,7 @@ public class Main {
             // Move the circle
             circleY += velocityY * deltaTime;
 
-            drawCircle(0.35f,circleY);
+            drawCircle(0.05f,circleY);
 
             GLFW.glfwSwapBuffers(window);
             // Check for keyboard, mouse and window events

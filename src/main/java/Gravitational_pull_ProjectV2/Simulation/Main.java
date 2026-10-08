@@ -73,7 +73,6 @@ public class Main {
 
             // Apply gravity
             velocityY += gravity * deltaTime;
-            System.out.println(velocityY);
 
             // Move the circle
             circleY += velocityY * deltaTime;
